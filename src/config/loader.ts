@@ -18,6 +18,7 @@ export const loadConfig = async (cwd: string) => {
         const {
             mod: { default: config },
         } = await bundleRequire({
+            cwd,
             filepath: path.join(cwd, file),
         });
         return config;
