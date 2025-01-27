@@ -9,7 +9,6 @@ export const loadConfig = async (cwd: string) => {
         try {
             await fs.stat(path.join(cwd, file));
         } catch (error) {
-            console.log(error);
             if ((error as { code?: string }).code !== 'ENOENT') {
                 throw error;
             }
@@ -19,7 +18,6 @@ export const loadConfig = async (cwd: string) => {
         const {
             mod: { default: config },
         } = await bundleRequire({
-            cwd,
             filepath: path.join(cwd, file),
         });
         return config;

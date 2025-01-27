@@ -86,7 +86,6 @@ cli.command('[...files]', 'Run linters and fix issues')
         try {
             config = await loadConfig(cwd);
         } catch (err) {
-            console.log(err);
             log.fatal({ err }, 'failed to load config');
             return 1;
         }
