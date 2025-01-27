@@ -7,7 +7,7 @@ import { ConfigNotFoundError } from '../errors';
 export const loadConfig = async (cwd: string) => {
     for (const file of ['run-linters.config.js', 'run-linters.config.ts']) {
         try {
-            await fs.stat(file);
+            await fs.stat(path.join(cwd, file));
         } catch (error) {
             if ((error as { code?: string }).code !== 'ENOENT') {
                 throw error;
