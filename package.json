@@ -1,0 +1,50 @@
+{
+  "name": "run-linters",
+  "version": "0.0.0-dev",
+  "type": "module",
+  "bin": "dist/cli/run-linters.js",
+  "scripts": {
+    "build": "tsup src/cli/run-linters.ts src/config/index.ts src/presets/index.ts src/index.ts --format esm --dts",
+    "watch": "tsup src/cli/run-linters.ts src/config/index.ts src/presets/index.ts src/index.ts --format esm --dts --watch",
+    "lint": "bun run src/cli/run-linters.ts"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./config": {
+      "import": "./dist/config/index.js",
+      "require": "./dist/config/index.js"
+    },
+    "./presets": {
+      "import": "./dist/presets/index.js",
+      "require": "./dist/presets/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.1",
+    "@types/bun": "latest",
+    "eslint": "^9.19.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "semantic-release": "^24.2.1",
+    "tsup": "^8.3.6",
+    "typescript-eslint": "^8.21.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "bundle-require": "^5.1.0",
+    "cac": "^6.7.14",
+    "globby": "^14.0.2",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0"
+  }
+}
