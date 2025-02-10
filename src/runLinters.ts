@@ -60,7 +60,7 @@ export const runLinters = async (
             if (err instanceof LinterFailedError) {
                 log.error(`linter ${linter.name} failed: ${err.message}`);
             } else if (!isAbortError(err)) {
-                log.error(`linter ${linter.name} failed`);
+                log.error({ err }, `linter ${linter.name} failed`);
             }
             hadAnyError = true;
         }
