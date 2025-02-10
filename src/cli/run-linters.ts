@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import cac from 'cac';
+import 'core-js/actual/promise/with-resolvers';
 import path from 'node:path';
 import process from 'node:process';
 import pino from 'pino';
