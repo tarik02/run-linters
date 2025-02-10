@@ -109,9 +109,7 @@ cli.command('[...files]', 'Run linters and fix issues')
             filesFilter = new Set(files.map((file) => path.resolve(cwd, file)));
         }
 
-        await runLinters(config as Config, context, filesFilter, options.fix ? 'fix' : 'check');
-
-        return 0;
+        return await runLinters(config as Config, context, filesFilter, options.fix ? 'fix' : 'check');
     });
 
 let exitCode = 0;
