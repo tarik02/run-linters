@@ -30,6 +30,7 @@
     "@trivago/prettier-plugin-sort-imports": "^5.2.1",
     "@types/bun": "latest",
     "core-js": "^3.40.0",
+    "depcheck": "^1.4.7",
     "eslint": "^9.19.0",
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.14.0",
