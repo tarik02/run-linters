@@ -1,0 +1,7 @@
+ignores:
+  - '@trivago/prettier-plugin-sort-imports'
+  - '@types/bun'
+  - depcheck
+  - prettier
+  - semantic-release
+  - run-linters
