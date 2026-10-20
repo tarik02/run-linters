@@ -45,7 +45,7 @@
   "dependencies": {
     "bundle-require": "^5.1.0",
     "cac": "^6.7.14",
-    "globby": "^14.0.2",
+    "globby": "^16.0.0",
     "pino": "^9.6.0",
     "pino-pretty": "^13.0.0"
   }
